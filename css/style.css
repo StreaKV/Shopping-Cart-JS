@@ -1,0 +1,123 @@
+* {
+    padding:0;
+    margin:0;
+}
+
+.container-nav li a {
+    padding:25px 20px;
+    color:#fff;
+    font-size:19px;
+    font-family:'Open Sans';
+    font-weight:300;
+}
+
+.container-nav li a:hover {
+    color:#000;
+    background:#fff;
+}
+
+.container-basket > a {
+    font-size:28px;
+    color:#000;
+}
+
+.container-basket > a:hover {
+    text-decoration:none;
+    color:rgb(10, 165, 10);
+}
+
+.container-header {
+    background: rgba(193,70,161,1);
+background: -moz-linear-gradient(left, rgba(193,70,161,1) 0%, rgba(203,96,179,1) 47%, rgba(219,54,164,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(193,70,161,1)), color-stop(47%, rgba(203,96,179,1)), color-stop(100%, rgba(219,54,164,1)));
+background: -webkit-linear-gradient(left, rgba(193,70,161,1) 0%, rgba(203,96,179,1) 47%, rgba(219,54,164,1) 100%);
+background: -o-linear-gradient(left, rgba(193,70,161,1) 0%, rgba(203,96,179,1) 47%, rgba(219,54,164,1) 100%);
+background: -ms-linear-gradient(left, rgba(193,70,161,1) 0%, rgba(203,96,179,1) 47%, rgba(219,54,164,1) 100%);
+background: linear-gradient(to right, rgba(193,70,161,1) 0%, rgba(203,96,179,1) 47%, rgba(219,54,164,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c146a1', endColorstr='#db36a4', GradientType=1 );
+}
+
+.container-empty a {
+    font-size:18px;
+}
+
+.container-empty a:hover {
+    text-decoration:none;
+}
+
+.background {
+    background-color:#000;
+    opacity:0.5;
+    width:100%;
+    height:300px;
+    position:absolute;
+}
+
+.container-img {
+  height:300px;
+  background-image:url('../img/sala.jpg');
+  background-position:center;
+}
+
+.container-img input {
+    width:100%;
+    border-right:none;
+    border-top-right-radius:0;
+    border-bottom-right-radius:0;
+    padding:25px;
+    border:none;
+}
+
+.container-img button {
+    background:#fff;
+    border:none;
+    padding:17px;
+    border-left:none;
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
+}
+
+.container-icon {
+    margin-top:35px;
+}
+
+.container-img button:hover {
+    background:#17a2b8;
+    color:#000;
+}
+
+.container-object {
+    max-width:250px;
+}
+
+.title-input {
+    font-family:'Open Sans';
+    font-size:24px;
+    font-weight:300;
+}
+
+@media screen and (max-width:767px) and (min-width:50px) {
+   .container-nav {
+       margin-top:10px;
+   }
+}
+
+.badge {
+    background-color: rgb(99, 148, 248);
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-size: 12px;
+    height: 25px;
+    line-height: 1;
+    padding: 6px 7px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 25px;
+}
+
+.checked {
+    color: orange;
+}

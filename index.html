@@ -1,0 +1,475 @@
+<html>
+<!DOCTYPE html>
+
+<head>
+    <title>Prueba de compras</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@100;300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/fontello.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div class="row justify-content-between align-items-center dropdown navbar-expand-md navbar-light bg-light">
+            <!--<div class="col-md-7 col-4">
+                <a href="" class="navbar-brand float-left d-md-block d-none col-2"><img src="img/logo.png" width="70"></a>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-list" aria-controls="nav-list"
+                    aria-expanded="false">
+                    <span class="p-2 navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="nav-list">
+                    <ul class="nav container-nav d-flex flex-md-row flex-sm-column">
+                        <li class="nav-item active"><a class="nav-link" href="">Inicio <span
+                                    class="sr-only">(current)</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="">Cursos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>-->
+            <div class="col ml-4 p-2 d-flex align-items-center">
+                <img class="rounded rounded-circle" src="img/favicon.png" width="64">
+                <div class="col-3 d-flex flex-column">
+                    <div class="d-flex">
+                        <p class="m-0">StreaK</p>
+                        <p class="m-0">Corp</p>
+                    </div>
+                    <div class="d-flex">
+                        <p class="m-0">and Designs</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mr-5 container-basket p-3">
+                <a id="contador" class="icon-basket" href="" data-toggle="dropdown" aria-expanded="false"
+                    aria-haspopup="true">
+                </a>
+                <div class="col-auto dropdown-menu mr-0 text-center" aria-labelledby="#basket-div">
+                    <div class="p-4 container-empty border">
+                        <a class="text-dark" id="vaciar" href="#">Vacíar carrito</a>
+                    </div>
+                    <div id="carrito">
+                        <table class="table text-center" id="listaCarrito">
+                            <thead>
+                                <tr>
+                                    <th scope="row">Imagen</th>
+                                    <th scope="row">Nombre</th>
+                                    <th scope="row">Précio</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!--<tr>
+                                    <td><img class=""
+                                            src="https://guitarrasinlimites.b-cdn.net/wp-content/uploads/2017/03/aprender-a-tocar-la-guitarra-foto-portada-gu%C3%ADa.jpg"
+                                            width="100"></td>
+                                    <td>Curso guitarra</td>
+                                    <td>49.99$</td>
+                                </tr>
+                                <tr>
+                                    <td><img class=""
+                                            src="https://dam.cocinafacil.com.mx/wp-content/uploads/2020/08/comida-arabe.jpg"
+                                            width="100"></td>
+                                    <td>Curso de comida vegetariana</td>
+                                    <td>69.99$</td>
+                                </tr>-->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="btn-group p-2" id="botones">
+                        <!--<a class="btn btn-success" href="">Pagar cursos</a>
+                        <a class="btn btn-secondary" href="">Seguir comprando</a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col d-flex justify-content-start align-items-center container-img p-0">
+                <div class="background"></div>
+                <form class="col d-flex align-items-center p-0 ml-5 p-4">
+                    <div class="form-group text-white">
+                        <label class="title-input mb-3" for="articulo">¿Que curso deseás buscar?</label>
+                        <input class="form-control" type="text" placeholder="Ingresa un articulo">
+                    </div>
+                    <div class="container-icon">
+                        <button class="icon-search"></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row p-4 justify-content-around container-header">
+            <div class="col-4 text-light">
+                <i class="icon-lock-open-alt"></i>¡Todo tipo de cursos para tí!
+            </div>
+            <div class="col-4 text-light">
+                <i class="icon-globe"></i>¡Aprénde de cualquier autor!
+            </div>
+            <div class="col-4 text-light">
+                <i class="icon-basket"></i>¡Todos los cursos en descuento!
+            </div>
+        </div>
+        <div class="row justify-content-center mt-5" id="cursos">
+
+            <div class="col-md-auto container-object p-4 d-flex flex-column">
+                <img class=""
+                    src="https://guitarrasinlimites.b-cdn.net/wp-content/uploads/2017/03/aprender-a-tocar-la-guitarra-foto-portada-gu%C3%ADa.jpg"
+                    width="200" height="113">
+                <p class="m-0 lead">Curso de guitarra básico</p>
+                <div class="d-flex">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <small>Autor: Luis Arturo</small>
+                <div class="d-flex">
+                    <span>Precio: </span>
+                    <div class="d-flex">
+                        <del class="m-0 ml-2">79.99$</del>
+                        <p class="m-0 ml-2 text-success precio"><b><u>49.99$</u></b></p>
+                    </div>
+                </div>
+                <div>
+                    <div class="col-12 d-flex flex-column p-0 mt-2">
+                        <button data-id="1" class="btn btn-info agregar-carrito">Comprar</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-auto container-object p-4 d-flex flex-column">
+                <img class="" src="https://dam.cocinafacil.com.mx/wp-content/uploads/2020/08/comida-arabe.jpg"
+                    width="200" height="113">
+                <p class="m-0 lead">Curso comida vegetariana</p>
+                <div class="d-flex">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <small>Autor: Osvaldo Reyes</small>
+                <div class="d-flex">
+                    <span>Precio: </span>
+                    <div class="d-flex">
+                        <del class="m-0 ml-2">129.99$</del>
+                        <p class="m-0 ml-2 text-success precio"><b><u>59.99$</u></b></p>
+                    </div>
+                </div>
+                <div>
+                    <div class="col-12 d-flex flex-column p-0 mt-2">
+                        <button data-id="2" class="btn btn-info agregar-carrito">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-auto container-object p-4 d-flex flex-column">
+                <img class="" src="https://static.diariofemenino.com/uploads/dieta/dietasparaadelgazar.jpg" width="200" height="113">
+                <p class="m-0 lead">Curso de dieta efectivo</p>
+                <div class="d-flex">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <small>Autor: Osvaldo Reyes</small>
+                <div class="d-flex">
+                    <span>Precio: </span>
+                    <div class="d-flex">
+                        <del class="m-0 ml-2">129.99$</del>
+                        <p class="m-0 ml-2 text-success precio"><b><u>59.99$</u></b></p>
+                    </div>
+                </div>
+                <div>
+                    <div class="col-12 d-flex flex-column p-0 mt-2">
+                        <button data-id="3" class="btn btn-info agregar-carrito">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-auto container-object p-4 d-flex flex-column">
+                <img class="" src="https://i.ytimg.com/vi/rbuYtrNUxg4/maxresdefault.jpg" width="200" height="113">
+                <p class="m-0 lead">Curso de HTML desde cero</p>
+                <div class="d-flex">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <small>Autor: Luis Arturo</small>
+                <div class="d-flex">
+                    <span>Precio: </span>
+                    <div class="d-flex">
+                        <del class="m-0 ml-2">149.99$</del>
+                        <p class="m-0 ml-2 text-success precio"><b><u>39.99$</u></b></p>
+                    </div>
+                </div>
+                <div>
+                    <div class="col-12 d-flex flex-column p-0 mt-2">
+                        <button data-id="4" class="btn btn-info agregar-carrito">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-auto container-object p-4 d-flex flex-column">
+                <img class=""
+                    src="https://s3-us-west-2.amazonaws.com/devcodepro/media/tutorials/pseudoclases-css-first-child-last-child-nth-child-t1.png"
+                    width="200" height="113">
+                <p class="m-0 lead">Curso de CSS desde cero</p>
+                <div class="d-flex">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <small>Autor: Luis Arturo</small>
+                <div class="d-flex">
+                    <span>Precio: </span>
+                    <div class="d-flex">
+                        <del class="m-0 ml-2">119.99$</del>
+                        <p class="m-0 ml-2 text-success precio"><b><u>39.99$</u></b></p>
+                    </div>
+                </div>
+                <div>
+                    <div class="col-12 d-flex flex-column p-0 mt-2">
+                        <button data-id="5" class="btn btn-info agregar-carrito">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-auto container-object p-4 d-flex flex-column">
+                <img class="" src="https://www.paginaswebs.com/wp-content/uploads/2018/12/php-2.png" width="200" height="113">
+                <p class="m-0 lead">Curso de PHP y MYSQL</p>
+                <div class="d-flex">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <small>Autor: Luis Arturo</small>
+                <div class="d-flex">
+                    <span>Precio: </span>
+                    <div class="d-flex">
+                        <del class="m-0 ml-2">149.99$</del>
+                        <p class="m-0 ml-2 text-success precio"><b><u>49.99$</u></b></p>
+                    </div>
+                </div>
+                <div>
+                    <div class="col-12 d-flex flex-column p-0 mt-2">
+                        <button data-id="6" class="btn btn-info agregar-carrito">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-auto container-object p-4 d-flex flex-column">
+                <img class="" src="https://rockcontent.com/es/wp-content/uploads/2020/05/Qu%C3%A9-es-Bootstrap.jpg"
+                    width="200" height="113">
+                <p class="m-0 lead">Curso de Framework Bootstrap 4</p>
+                <div class="d-flex">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <small>Autor: Luis Arturo</small>
+                <div class="d-flex">
+                    <span>Precio: </span>
+                    <div class="d-flex">
+                        <del class="m-0 ml-2">149.99$</del>
+                        <p class="m-0 ml-2 text-success precio"><b><u>49.99$</u></b></p>
+                    </div>
+                </div>
+                <div>
+                    <div class="col-12 d-flex flex-column p-0 mt-2">
+                        <button data-id="7" class="btn btn-info agregar-carrito">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-auto container-object p-4 d-flex flex-column">
+                <img class="" src="https://i.ytimg.com/vi/seaq4UxKNHU/maxresdefault.jpg" width="200" height="113">
+                <p class="m-0 lead">Curso de JavaScript desde cero</p>
+                <div class="d-flex">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <small>Autor: Luis Arturo</small>
+                <div class="d-flex">
+                    <span>Precio: </span>
+                    <div class="d-flex">
+                        <del class="m-0 ml-2">179.99$</del>
+                        <p class="m-0 ml-2 text-success precio"><b><u>69.99$</u></b></p>
+                    </div>
+                </div>
+                <div>
+                    <div class="col-12 d-flex flex-column p-0 mt-2">
+                        <button data-id="8" class="btn btn-info agregar-carrito">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-pagination d-flex justify-content-center mt-5 pb-5 shadow-lg">
+            <nav aria-label="...">
+                <ul class="pagination">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="" tabindex="-1">Atrás</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="">1 <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="">2</a></li>
+                    <li class="page-item"><a class="page-link" href="">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="">Siguiente</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+
+    <footer class="text-center bg-dark text-light p-4 mt-5">
+        <b class="lead">Hecho por Luis Arturo @ 2020.</b>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
+
+<!--<div class="row bg-light">
+            <nav class="col navbar navbar-expand-lg p-0 navbar-light">
+                <a class="p-0 pl-2 pt-1 pb-1 pr-5 m-0 navbar-brand" href=""><img src="img/logo.png" width="70"></a>
+                <div>
+                    <button class="navbar-toggler mr-4 bg-white" type="button" data-toggle="collapse"
+                        data-target="#nav-div" aria-controls="nav-div" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="basket dropdown">
+                        <a class="icon-basket mr-5" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-targe="nav-div" href=""></a>
+                        <div class="dropdown-menu" id="nav-div">
+                            <table class="table">
+                                <thead>
+                                    <th scope="row">Imagen</th>
+                                    <th scope="row">Nombre</th>
+                                    <th scope="row">Précio</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse nav-list" id="nav-div">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active pl-4 pr-4">
+                            <a class="nav-link" href="">Inicio <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Cursos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="basket-two dropdown">
+                    <a class="icon-basket mr-5" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-targe="nav-div" href=""></a>
+                    <div class="dropdown-menu" id="nav-div">
+                        <table class="table">
+                            <thead>
+                                <th scope="row">Imagen</th>
+                                <th scope="row">Nombre</th>
+                                <th scope="row">Précio</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    
+    ---------------------------------
+    
+        <div class="row bg-primary navbar navbar-expand-lg">
+            <div>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="nav-div">
+                    <span></span>
+                </button>
+            </div>
+            <div class="col-6 collapse navbar-collapse p-0 d-flex align-items-center" id="nav-div">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 p-4 text-white basket">
+                <a class="icon-basket float-right mr-5" data-toggle="dropdown" id="divEx" href="" aria-haspopup="true"
+                    aria-expanded="false" type="button"></a>
+                <div class="dropdown-menu" aria-labelledby="#divEx">
+                    <table class="table mr-4 text-center">
+                        <thead>
+                            <th scope="row">Imagen</th>
+                            <th scope="row">Nombre</th>
+                            <th scope="row">Précio</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img class=""
+                                        src="https://guitarrasinlimites.b-cdn.net/wp-content/uploads/2017/03/aprender-a-tocar-la-guitarra-foto-portada-gu%C3%ADa.jpg"
+                                        width="100"></td>
+                                <td>Curso guitarra</td>
+                                <td>49.99$</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    
+    -->
+
+<!--<div class="col-md-auto col-12 bg-secondary">
+                <img class="" src="https://guitarrasinlimites.b-cdn.net/wp-content/uploads/2017/03/aprender-a-tocar-la-guitarra-foto-portada-gu%C3%ADa.jpg"
+                    width="200" height="113">
+                    <div class="d-flex flex-column">
+                        <p class="m-0">Curso guitarra</p>
+                    </div>
+            </div>-->
